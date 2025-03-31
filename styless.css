@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #5D5D7D;
+}
+/* TODOS SÃO FONT-WEIGHT: 400, ENTÃO COMO ESTÁ COM O * O FONT-WEIGHT 400 SE APLICARÁ A TUDO
+QUANDO VOCÊ VER QUE É UMA INFORMAÇÃO UTILIZADA POR TODOS QUE ESTÃO NO CSS, EX NO H1 E NO P O FONT-WEIGHT 400, E NOS DEMAIS TAMBÉM, JÁ COLOCA NO
+* PARA FICAR NO ESTILO GLOBAIS. OU SE VOCÊ VER QUE 90% DOS CODIGOS UTILIZAM A MESMA INFORMAÇÃO, VOCÊ COLOCA ESSA INFORMAÇÃO AQUI NO ESTILO
+GLOBAIS E NESSES 10% QUE NÃO TIVER O MESMO ESTILO, VOCÊ COLOCA O ESTILO DELE*/
+
+
+.wrapper {
+    height: 100vh; /* O WRAPPER É A DIV, ESTÁ COM HEIGHT DE 100VH E WIDTH 100VW PARA OCUPAR 100% DA TELA*/
+    width: 100vw;
+}
+
+.container-left {
+    display: inline-block; /* UTILIZADO O DISPLAY INLINE BLOCK PARA FICAR A TEXTO AO LADO DA IMAGEM*/
+    width: 60%; /* O WIDTH DO CONTAINER LEFT QUE É O H1, O PARÁGRAFO E O BOTÃO, ESTÁ 60% POIS ELE OCUPA UM ESPAÇO MAIOR DA TELA DO QUE O CONTAINER RIGHT QUE É SOMENTE A IMAGEM QUE OCUPA O RESTANTE DE 40%*/
+    padding-left: 136px;
+    margin-top: 5%; /* ESSE MARGIN-TOP:25% É A DISTÂNCIA DA DIV H1/P/BUTTON COM O TOP DO SITE*/
+}
+
+/* O CONTAINER-LEFT QUE É A CLASS DA DIV QUE TEM O H1/P/BUTTON, ESTÁ COM O PADDING-LEFT:136PX POIS ENGLOBA
+TUDO QUE ESTIVER DENTRO DESSA DIV, ENTÃO AO INVÉS DE EU COLOCAR MARGIN-LEFT NO H1/P/BUTTON UM POR UM, A DIV QUE 
+ELES ESTÃO DENTRO QUE É O CONTAINER-LEFT, ESTÁ COM O PADDIN-LEFT:136PX QUE SERIA A MARGIN-LEFT.*/
+
+.container-right {
+    display: inline-block; /* UTILIZADO O DISPLAY INLINE BLOCK PARA FICAR A TEXTO AO LADO DA IMAGEM*/
+    background-color: rgba(93, 93, 125, 0.16); /*0.16 É O OPACITY, ESTÁ SENDO EXPLICADO O USO DELE LOGO A BAIXO.*/
+    height: 140vh; /* ESSE HEIGHT DE 140VH É PARA O BACKGROUND-COLOR (A COR CINZA CLARINHO COM OPACITY) PEGAR 100% DA TELA, DESDE O TOPO ATÉ O FINAL DA TELA*/
+    width: 40%; /* O WIDTH DE 40% É PQ COMO O CONTAINER-LEFT ESTÁ OCUPANDO 60% DA TELA, O CONTAINER-RIGHT QUE É A IMAGEM DO LADO DIREITO IRÁ OCUPAR O RESTANTE QUE É 40%*/
+    position: absolute; /*POSITION ABSOLUTE É PRECISO COLOCAR PARA A IMAGEM/BACKGROUND FICAR POSICIONADO DO LADO DIREITO, PORQUE SE COLOCAR SOMENTE O
+    DISPLAY INLINE BLOCK PARA A IMAGEM FICAR POSICIONADA DO LADO DIREITO NÃO SERÁ POSSÍVEL. O POSITION ABSOLUTE SE A TELA MEXER A IMAGEM MEXE/DESCE JUNTO COM A TELA*/
+}
+
+/* EU POSSO APLICAR UM BACKGROUND E NO PRÓPRIO BACKGROUND TER UM OPACITY. TEM O RGB QUE É O RED, GREEN E BLUE, E TEMOS O RGBA QUE PODEMOS ADICIONAR MAIS
+UMA VARIANTE QUE POR ÚLTIMO SERÁ O OPACITY, COMO ESTÁ NO CONTAINER-RIGHT ACIMA: BACKGROUND-COLOR: RGBA (10,23,55,0.5); O 0.5 É O OPACITY, 10 É O RED, 23 É O GREEN E O 55 É O BLUE.
+SÓ QUE NO FIGMA ESTÁ EM HEXADECIMAL, BACKGROUND:#5D5D7D; É A COR EM HEXADECIMAL. PARA CONVERTER EM RGB É SÓ COLOCAR O CÓDIGO HEXADECIMAL #5D5D7D; NO CONVERSOR DE RGB.
+A COR EM RGBA FICA: BACKGROUND-COLOR: RGBA (93,93,125,0.16); O 0.16 É A PORCENTAGEM DO OPACITY QUE ESTÁ NO FIGMA.
+OPACITY ESPECIFICA A TRANSPARÊNCIA DE UM ELEMENTO, ISTO É, O GRAU NO QUAL O BACKGROUND ATRÁS DO ELEMENTO É SOBREPOSTO.
+OPACITY VAI DE 0 ATÉ 1, ENTÃO 1 É COMPLETAMENTE VISÍVEL E 0 É INVISÍVEL. O OPACITY DESTE PROJETO ESTÁ DE 0.16 QUE É QUASE INVISÍVEL. E NÃO ESTÁ APLICANDO OPACITY SOMENTE
+NO BACKGROUND, E SIM EM TUDO QUE ESTÁ SOBRE O BACKGOUND QUE SERIA A IMAGEM E O TEXTO QUE ESTÁ DENTRO DELA.*/
+
+
+
+img {
+    position: relative; 
+    top: 10%;
+    right: 130px;
+}
+/*A IMG ESTÁ COM POSITION RELATIVE NA IMAGEM POIS EU QUERO POSICIONAR ELA SEMPRE RELATIVO, COMPARADO SEMPRE A POSIÇÃO INICIAL DELA, ENTÃO DA POSIÇÃO 
+INICIAL DELA, DO TOP QUE É A PARTE DE CIMA DELA EU QUERO 10% PRA IMAGEM FICAR CENTRADA NO MEIO DA TELA E NO MEIO DO BACKGROUND CINZA.
+E O RIGHT EM 130PX É A POSIÇÃO DA MENINA PARA FICAR UM POUCO MAIS CENTRADA E UM POUCO FORA DO BACKGROUND CINZA COMO ESTÁ NA IMAGEM DO FIGMA*/
+
+
+h1 {
+    font-size: 70px;
+    line-height: 80px;
+    margin-top: 300px;
+    margin-left: 120px;
+    width: 368px; /* O WIDTH É O TAMANHO/ GROSSURA DA LETRA*/
+    margin-right: 316px;
+}
+
+p {
+    font-size: 28px;
+    line-height: 48px;
+    opacity: 0.6;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 110px;
+    width: 400px;
+    margin-right: 141px;
+}
+
+/* NO MARGIN, QUANDO EU COLOCO SOMENTE DOIS VALORES EX MARGIN: 15PX 0PX; O PRIMEIRO VALOR QUE É O 15PX SE APLICA PARA TOP E BOTTOM E O SEGURO PARA OS LADOS DIREITO E ESQUERDO*/
+/* NA PARTE DA ESCRITA QUE É O H1/P/BUTTON E ESTÁ NA CLASS CONTAINER-LEFT, ELE TEM UM ESPAÇAMENTO DO 
+LADO ESQUERDO DE 136PX, E PARA NÃO TER QUE FICAR COLOCANDO MARGIN-LEFT UM POR UM NO H1/P/BUTTON, VAMOS USAR O PADDING. A MARGIN É QUANDO EU PEGO
+UM ITEM E ESPAÇO ELE DO LADO DE FORA, PARA GERAR ESPAÇO EM TORNO DOS ELEMENTOS, DEFINE O TAMANHO DO ESPAÇO EM BRANCO FORA DA BORDA.
+JÁ O PADDING É QUANDO DENTRO DA MINHA CAIXA E COLOCO COM ESPAÇAMENTO, OU SEJA, OS ITENS VÃO FICAR MAIS APERTADOS DENTRO DA CAIXA, PADDING GERA ESPAÇO
+EM TORNO DO CONTEÚDO. O PREENCHIMENTO LIMPA UMA ÁREA AO REDOR DO CONTEÚDO DE UM ELEMENTO. ENTÃO EU COLOCANDO PADDING: 136PX NA DIV QUE ESTÁ O H1/P/BUTTON, 
+A DIV ESTÁ COM A CLASS CONTAINER-LEFT, COLOCANDO PADDING-LEFT: 136PX; TUDO QUE ESTIVER DENTRO DA DIV CONTAINER-LEFT,
+FICARÁ COM O PADDING-LEFT DE 136PX QUE SERIA A MARGIN LEFT.*/
+
+
+button {
+    width: 269px;
+    height: 62px;
+    background: #9499EA;
+    box-shadow: (0px 10px 24px rgba(148, 153, 234, 0.10));
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-left: 120px;
+}
+
+/* O border: none;  O border-radius: 30px; E O  cursor: pointer; NÃO ESTÁ NO FIGMA, É PRECISO IR TESTANDO O BORDER-RADIUS PARA DAR UMA CURVINHA AO LADO DO BOTÃO*/
+
+button:hover {
+    opacity: .8;
+}
+/* O HOVER É PARA QUE TODA VEZ QUE O USUÁRIO PASSAR O MOUSE NO BOTÃO, A COR DELE FICAR UM POUQUINHO TRANSPARENTE*/
+
+button:active {
+    opacity: .05;
+}
+
+/* O ACTIVE É PARA QUANDO EU CLICAR NO BOTÃO, O OPACITY FICARÁ UM POUCO MAIS TRANPARENTE AINDA DO QUE QUANDO ELE PASSAR POR CIMA.*/
+
+a {
+    font-size: 28px;
+    line-height: 41px;
+    margin-top: 24px;
+    margin-right: 41px; /* ESSA É A MARGIN DO LADO DIREITO PARA DESGRUDAR AS LETRAS UMA DA OUTRA DO HEADER HOMW/WORK/ABOUT/CONTACT*/
+    cursor: pointer;
+}
+
+/* O FONT-SIZE, LINE-HEIGHT E O MARGIN-TOP CLICANDO NA LETRA APARECE OS TAMANHOS*/
+
+
+a:nth-child(2) {
+    opacity: 0.4;
+}
+
+/* FOI UTILIZADO O NTH-CHILD() POIS NESSE HEADER, A COR DE SOMENTE UM NO CASO O WORK ESTÁ COM UMA COR DIFERENTE.
+O HEADER WORK ESTÁ COMO SEGUNDO HOME/WORK/ABOUT/CONTACT, ENTÃO O WORK ESTÁ COMO "SEGUNDO FILHO", E PARA COLOCAR O OPACITY QUE
+ESTÁ SENDO PEDIDO, É PRECISO COLOCAR O 2 QUE É A IDENTIFICAÇÃO DO "a" QUE É A INDENTIFICAÇÃO DO LINK HEADER E DEPOIS O NTH-CHILD() E
+DENTRO DESSE COLCHETE É PRECISO COLOCAR O NÚEMRO DA POSIÇÃO DO FILHO, QUE NO CASO DO WORK É O NÚMERO 2 E O ABOUT POR EX É O 3,
+SE EU QUISER ALTERAR A COR DO ABOUT, É SÓ COLOCAR O NÚMERO 3 DENTRO DO COLCHETE.*/
+
+a:hover {
+    opacity: 0.4;
+}
+
+/* HOVER QUANDO PASSAR O MOUSE POR CIMA A COR MUDAR*/
+
+a:active {
+    opacity: 0.8;
+}
+
+/*ACTIVE QUANDO ESTÁ PRESSIONANDO COM O MOUSE A COR MUDA, NESSE CASO A COR FICA UM POUCO MAIS CLARA QUE O ACTIVE QUE ESTÁ
+A CIMA, DEVIDO AO OPACITY TER UMA PORCENTAGEM DIFERENTE.*/
+
+header {
+    margin-top: 24px; /* ESSE MARGIN-TOP/RIGHT/LEFT É A DISTÂNCIA QUE UMA HEADER TEM COM O OUTRO HOME/WORK/ABOUT/CONTACT*/
+    margin-right: 0px;
+    margin-left: 57px;
+}
+/* TEM A OPÇÃO TAMBÉM DE COLOCAR: HEADER{ MARGIN: 24PX 0 0 57PX;} O PRIMERO 0 É PARA O LADO DIREITO E O SEGUNDO 0 É PARA BOTTOM*/
+
+
+/* esse max-width: 900px é para quando a tela for a partir de 900px como a de um celular por exemplo, 
+será aplicado as configurações a seguir.*/
+@media screen and (max-width: 900px) {
+.container-left {
+    width: 100%; /* width: 100% para ocupar tudo*/
+    height: 50%; /* height: 50% para ocupar somente metade da tela*/
+    padding: 0;
+    margin: 0%;
+}
+    
+.container-right {
+    display: block; /* é display block porque eu não quero que fique um do lado do outro, e sim um em baixo do outro. Agora para display inline block seria para quando eu quero que a imagem fique ao lado do texto*/
+    height: auto; /* não quero que o height ocupe a tela toda, e coloquei como auto porque assim ele vai se adaptar de acordo com o tamanho que ele tem disponível*/
+    width: 100%; /* width de 100% porque ele tem que ocupar a tela toda*/
+    position: static; /* position static ele ignora completamente o top e o right*/
+    padding: 40px;
+}
+
+img {
+    position: static; /* position static ele ignora completamente o top e o right*/
+    width: 90%; /* width 90% é o tamanho da imagem*/
+    /* ou poderia usar o max-width: 90% que no caso o máximo que a imagem irá crescer será 90%*/
+    
+}
+
+
+header {
+    display: none; /* o menu do header no mobile ele desaparece, por isso o display none*/
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 52px;
+        width: auto; /* width auto porque eu quero que ele se adapte a tela*/
+        margin-top: 58px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 0;
+        text-align: center; /* o texto ficará alinhado ao centro*/
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    /* poderia ser: margin: 15px 40 px quando coloco somente dois valores, o primeiro é para cima e para baixo top e bottom e o segundo para os lados right e left*/
+    width: auto; /* deixa como auto porque eu tinha colocado um valor de width anteriormente no caso para desktop*/
+    text-align: center; /* para o texto ficar alinhado*/
+    font-size: 14px; /* é o tamanho do texto para celular*/
+    line-height: 24px; /* é o tamanho do texto para celular*/
+    }
+
+    button {
+
+        margin: 0 auto; 
+        display: block;
+
+        /* quando coloca somente dois valores de margin, o primeiro valor que nesse caso é o 0 ele vai aplicar em cima e baixo top e bottom e o segundo que nesse 
+        caso é o auto ele vai aplicar para os lado right e left*/
+        /* como o margin está auto que é automático, ele centraliza o elemento que nesse caso é o botão, só que ele só centraliza o elemnto quando o display é block*/
+    }
+}
+
+
