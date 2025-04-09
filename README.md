@@ -1,4 +1,6 @@
 # Easy Shopping 🛒
+<img src="https://github.com/Brenomar/Easy-Shopping/blob/master/assets/NOTE%20E%20CELULAR.png?raw=true"/>
+
 
 ## Sobre o projeto
 O **Easy Shopping** é um projeto desenvolvido para facilitar a experiência de compra online, oferecendo uma interface simples, intuitiva e eficiente.
